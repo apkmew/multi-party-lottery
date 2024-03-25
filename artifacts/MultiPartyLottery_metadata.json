@@ -1,0 +1,427 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_N",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_T1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_T2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_T3",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "dataHash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint64",
+						"name": "block",
+						"type": "uint64"
+					}
+				],
+				"name": "CommitHash",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "answer",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					}
+				],
+				"name": "RevealAnswer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "revealHash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "random",
+						"type": "uint256"
+					}
+				],
+				"name": "RevealHash",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "N",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "StartTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "T1",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "T2",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "T3",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hashedChoice",
+						"type": "bytes32"
+					}
+				],
+				"name": "commitHashedChoice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "currentN",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "currentStage",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "findWinner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCurrentStage",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "data",
+						"type": "bytes32"
+					}
+				],
+				"name": "getHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "choice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "salt",
+						"type": "string"
+					}
+				],
+				"name": "getHashChoice",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "data",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					}
+				],
+				"name": "getSaltedHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_idx",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_choice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_salt",
+						"type": "string"
+					}
+				],
+				"name": "revealChoice",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "idx",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"lottery.sol": "MultiPartyLottery"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"CommitReveal.sol": {
+			"keccak256": "0xa77f490c80ac311d2e93fa2078cad32065966dec0cb5ea3afa9c9efaa8a7c949",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://882992451b2a2ca0a40aa5d8a6a7217119b27471f4a5b16ee33672805dad008a",
+				"dweb:/ipfs/QmYTg69kWFny4MosfC3KVtuzgRLN7USfsgUuq7kgNn8CLk"
+			]
+		},
+		"Ownership.sol": {
+			"keccak256": "0x35bcf3cf8307c73884e44f22eb4134d009c8f490f7a1c2ca1f127f16d5ff7943",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4159d3ff5bcd1397810b6a66d74bd5a773eab2265e6fd34c914e7651a84763a9",
+				"dweb:/ipfs/QmVFdxC4YdhXYkNtoZskWQWm2aQieRf375D94Y8m2bmjhT"
+			]
+		},
+		"lottery.sol": {
+			"keccak256": "0x3f4ca04bfb471295c6b2ecd8d622f54b6dfba187275403a551848b142af9f086",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f6d71846d19109d9cf2ed54d9a91dfb4c2a9441763f0b825ed541893fbb6bc73",
+				"dweb:/ipfs/Qmbo64DRj4AUV6vpZxh9EUn9sdqpWN53htGwCwbJ3auNg4"
+			]
+		}
+	},
+	"version": 1
+}

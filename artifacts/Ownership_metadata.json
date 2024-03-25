@@ -1,0 +1,77 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Ownership.sol": "Ownership"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Ownership.sol": {
+			"keccak256": "0x35bcf3cf8307c73884e44f22eb4134d009c8f490f7a1c2ca1f127f16d5ff7943",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4159d3ff5bcd1397810b6a66d74bd5a773eab2265e6fd34c914e7651a84763a9",
+				"dweb:/ipfs/QmVFdxC4YdhXYkNtoZskWQWm2aQieRf375D94Y8m2bmjhT"
+			]
+		}
+	},
+	"version": 1
+}
