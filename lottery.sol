@@ -127,6 +127,13 @@ contract MultiPartyLottery is CommitReveal, Ownership {
                 goodPlayers[goodPlayersCount].isWithdrawn = players[i].isWithdrawn;
                 goodPlayersCount++;
             }
+            else{
+                uint returnMoney = ( lotteryFee * 98 ) / 100;
+                uint ownerFee = ( lotteryFee * 2 ) / 100;
+                
+                payable( players[i].addr ).transfer( returnMoney );
+                payable( owner() ).transfer( ownerFee );
+            }
         }
 
         if( goodPlayersCount == 0 ){
@@ -139,7 +146,7 @@ contract MultiPartyLottery is CommitReveal, Ownership {
         }
         uint winnerIdx = uint( keccak256( abi.encodePacked( xorChoice ) ) ) % goodPlayersCount;
         
-        _rewardWinner( goodPlayers[winnerIdx].addr );
+        _rewardWinner( goodPlayers[winnerIdx].addr, goodPlayersCount );
         _resetGame();
     }
 
@@ -148,9 +155,9 @@ contract MultiPartyLottery is CommitReveal, Ownership {
         payable( owner() ).transfer( ownerFee );
     }
 
-    function _rewardWinner( address _winnerAddr ) private {
-        uint winnerReward = ( lotteryFee * currentN * 98 ) / 100;
-        uint ownerFee = ( lotteryFee * currentN * 2 ) / 100;
+    function _rewardWinner( address _winnerAddr, uint goodPlayerN ) private {
+        uint winnerReward = ( lotteryFee * goodPlayerN * 98 ) / 100;
+        uint ownerFee = ( lotteryFee * goodPlayerN * 2 ) / 100;
 
         payable( _winnerAddr ).transfer( winnerReward );
         payable( owner() ).transfer( ownerFee );

@@ -415,11 +415,11 @@
 			]
 		},
 		"lottery.sol": {
-			"keccak256": "0x3f4ca04bfb471295c6b2ecd8d622f54b6dfba187275403a551848b142af9f086",
+			"keccak256": "0x7cf4e19b8cff85df7dbe4f0392f72d42d7ce8c5d7198139703cb72bf7c0d64a4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f6d71846d19109d9cf2ed54d9a91dfb4c2a9441763f0b825ed541893fbb6bc73",
-				"dweb:/ipfs/Qmbo64DRj4AUV6vpZxh9EUn9sdqpWN53htGwCwbJ3auNg4"
+				"bzz-raw://78ca67fd8472b16fe2ba4beab09259e1630f64f94d72db2a511e3d11322ada9e",
+				"dweb:/ipfs/QmetiTt661UUnQsT9xx8eRfpd4wph7n7vwKeqJ8mTCNbX9"
 			]
 		}
 	},
